@@ -35,14 +35,14 @@ public class OffersService {
 	return	offersDao.create(offer);
 	}
 	
-//	 public Offer getOffer(int id) {
-//		 return offersDao.getOffer(id);
-//	 }
-//	 
-//	 public Offer findId(int id) {
-//		 return offersDao.getOffer(id);
-//	 }
-//	 
+	 public Offer getOffer(int id) {
+		 return offersDao.getOffer(id);
+	 }
+	 
+	 public Offer findId(int id) {
+		 return offersDao.getOffer(id);
+	 }
+	 
 	 public boolean editOffer(Offer offer) {
 		 return offersDao.update(offer);
 	 }

@@ -77,14 +77,14 @@ public class OfferController {
 	}
 
 	
-//	@RequestMapping("editOffer")
-//	public String editOffer(Model model,HttpServletRequest req) {
-//		Offer offer = offerservice.findId(new Integer(req.getParameter("id"))); 
-//		model.addAttribute("offer",offer);
-//		return "editOffer";
-//	}
+	@RequestMapping("editOffer")
+	public String editOffer(Model model,HttpServletRequest req) {
+		Offer offer = offerservice.findId(new Integer(req.getParameter("id"))); 
+		model.addAttribute("offer",offer);
+		return "editOffer";
+	}
 	
-	@RequestMapping("/updateOffer")
+	@RequestMapping("updateOffer")
 	public String updateOffer(Model model,Offer offer) {
 		offerservice.editOffer(offer);
 		List<Offer> offers = offerservice.getCurrent();

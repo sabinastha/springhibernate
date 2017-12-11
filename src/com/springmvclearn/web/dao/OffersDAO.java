@@ -98,24 +98,24 @@ public class OffersDAO {
 	}
 	
 	
-//	public Offer getOffer(int id) {
-//		MapSqlParameterSource params = new MapSqlParameterSource();
-//		params.addValue("id", id);
-//
-//		return jdbc.queryForObject("select * from offer where id=:id", params, new RowMapper<Offer>() {
-//
-//			public Offer mapRow(ResultSet rs, int RowNum) throws SQLException {
-//				Offer offer = new Offer();
-//
-//				offer.setId(rs.getInt("id"));
-//				offer.setUsername(rs.getString("username"));
-//				offer.setFullname(rs.getString("fullname"));
-//				offer.setPassword(rs.getString("password"));
-//				return offer;
-//			}
-//		});
-//
-//	}
-//	
+	public Offer getOffer(int id) {
+		MapSqlParameterSource params = new MapSqlParameterSource();
+		params.addValue("id", id);
+
+		return jdbc.queryForObject("select * from offer where id=:id", params, new RowMapper<Offer>() {
+
+			public Offer mapRow(ResultSet rs, int RowNum) throws SQLException {
+				Offer offer = new Offer();
+
+				offer.setId(rs.getInt("id"));
+				offer.setUsername(rs.getString("username"));
+				offer.setFullname(rs.getString("fullname"));
+				offer.setPassword(rs.getString("password"));
+				return offer;
+			}
+		});
+
+	}
+	
 	
 }
